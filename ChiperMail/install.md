@@ -43,6 +43,8 @@ sudo newaliases
 
 sudo systemctl restart postfix
 
+sudo dpkg -i djigzo-web_*_all.deb
+
 sudo apt install tomcat9 -y
 
 echo 'JAVA_OPTS="-Djava.awt.headless=true -Xmx128M"' | sudo tee -a /etc/default/tomcat9
