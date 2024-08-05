@@ -3,7 +3,7 @@
 
 ### https://www.ciphermail.com/documentation/gateway-installation-guide/ubuntu-debian.html
 
-sudo apt-get install gpg gzip libsasl2-modules mawk openjdk-11-jre openjdk-11-jre-headless postfix sudo symlinks tar
+sudo apt-get install gpg gzip libsasl2-modules mawk openjdk-11-jre openjdk-11-jre-headless postfix sudo symlinks tar -y
 
 ## During the installation of Postfix, select “No Configuration”.
 
@@ -19,7 +19,7 @@ sudo dpkg -i djigzo_5.5.3.0g99d2faca_all.deb ciphermail-core-os-debian_5.5.3.0g9
 
 sudo systemctl enable ciphermail-gateway-backend
 
-sudo apt install postgresql
+sudo apt install postgresql -y
 
 sudo -u postgres createuser -P djigzo
 
@@ -43,7 +43,7 @@ sudo newaliases
 
 sudo systemctl restart postfix
 
-sudo apt install tomcat9
+sudo apt install tomcat9 -y
 
 echo 'JAVA_OPTS="-Djava.awt.headless=true -Xmx128M"' | sudo tee -a /etc/default/tomcat9
 
