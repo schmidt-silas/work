@@ -61,9 +61,7 @@ sudo tee /etc/tomcat9/Catalina/localhost/web.xml
 sudo cp /lib/systemd/system/tomcat9.service /etc/systemd/system
 
 ## Under Security, add the following line to the file /etc/systemd/system/tomcat9.service to allow writing the directory where the TLS certificate is stored:
-
-
-ReadWritePaths=/usr/share/djigzo-web/ssl/
+    ReadWritePaths=/usr/share/djigzo-web/ssl/
 
 sudo systemctl daemon-reload
 
