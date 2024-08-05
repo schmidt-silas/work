@@ -47,9 +47,9 @@ sudo apt install tomcat9 -y
 
 echo 'JAVA_OPTS="-Djava.awt.headless=true -Xmx128M"' | sudo tee -a /etc/default/tomcat9
 
-sudo chown tomcat:djigzo /usr/share/djigzo-web/ssl/sslCertificate.p12
-
-sudo cp -b /usr/share/djigzo-web/conf/tomcat/server.xml /etc/tomcat9/
+## Unsicher ob benötigt!
+### sudo chown tomcat:djigzo /usr/share/djigzo-web/ssl/sslCertificate.p12
+### sudo cp -b /usr/share/djigzo-web/conf/tomcat/server.xml /etc/tomcat9/
 
 echo '<Context docBase="/usr/share/djigzo-web/djigzo.war" />' | \
 sudo tee /etc/tomcat9/Catalina/localhost/ciphermail.xml
