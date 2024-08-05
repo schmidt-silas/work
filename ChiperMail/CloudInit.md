@@ -38,4 +38,4 @@ runcmd:
   - [systemctl, restart, systemd-resolved]
   - reboot
 #
-# REPLACE 3x <USER> AND 1x <PUBLIC_SSH_KEY>
+# REPLACE 2x <USER> AND 1x <PUBLIC_SSH_KEY>
