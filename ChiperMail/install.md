@@ -70,7 +70,7 @@ sudo systemctl restart rsyslog
 sudo systemctl restart ciphermail-gateway-backend
 sudo systemctl restart tomcat9
 
-### https://192.168.178.2:8443/ciphermail
+### https://<FQDN>:8443/ciphermail
 ### CipherMail gateway by default uses PAM authentication. 
 
 # CipherMail log via journald
