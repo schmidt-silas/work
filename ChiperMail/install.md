@@ -23,7 +23,6 @@ sudo -u postgres createuser -P djigzo
 
 sudo -u postgres createdb --owner djigzo djigzo
 psql -h 127.0.0.1 djigzo djigzo < /usr/share/djigzo/conf/database/sql/djigzo.sql
-
 ## Use the password which was selected with the createuser command.
 
 sudo cp -b /usr/share/djigzo/conf/system/postfix/main.deb.cf /etc/postfix/main.cf
@@ -52,6 +51,9 @@ sudo systemctl daemon-reload
 sudo systemctl restart rsyslog
 sudo systemctl restart ciphermail-gateway-backend
 sudo systemctl restart tomcat9
+
+## SET PASSWD
+sudo passwd
 
 ### https://<FQDN>:8443/ciphermail
 ### CipherMail gateway by default uses PAM authentication. 
