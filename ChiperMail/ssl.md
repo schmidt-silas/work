@@ -3,7 +3,6 @@ sudo apt install letsencrypt -y
 sudo certbot certonly --standalone --agree-tos --preferred-challenges http -d cipher.komm-one.dev
 
 # acme@komm-one.dev
-
 sudo -u root cat /etc/letsencrypt/live/cipher.komm-one.dev/fullchain.pem
 sudo -u root cat /etc/letsencrypt/live/cipher.komm-one.dev/privkey.pem
 
